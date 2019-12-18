@@ -2,7 +2,6 @@ from random import randrange
 from graph import Graph
 from vertex import Vertex
 
-
 def print_graph(graph):
   for vertex in graph.graph_dict:
     print("")
@@ -12,7 +11,6 @@ def print_graph(graph):
       print("No edges!")
     for adjacent_vertex in vertex_neighbors:
       print("=> " + adjacent_vertex)
-
 
 def build_graph(directed):
   g = Graph(directed)
@@ -30,6 +28,5 @@ def build_graph(directed):
     g.add_edge(v1, v2, randrange(1, 10))
 
   print_graph(g)
-
 
 build_graph(False)
