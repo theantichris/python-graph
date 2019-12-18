@@ -12,5 +12,6 @@ class Vertex:
     def add_edge(self, vertex, weight=0):
         if vertex == self:
             print("A vertex cannot have an edge to itself")
-        else:
-            self.edges[vertex.value] = weight
+            return
+        
+        self.edges[vertex.value] = weight
