@@ -20,7 +20,7 @@ def build_graph(directed):
     vertices.append(vertex)
     g.add_vertex(vertex)
 
-  for v in range(len(vertices)):
+  for _ in range(len(vertices)):
     v_idx = randrange(0, len(vertices) - 1)
     v1 = vertices[v_idx]
     v_idx = randrange(0, len(vertices) - 1)
