@@ -7,7 +7,11 @@ class Graph:
         print("Adding {}".format(vertex.value))
         self.graph_dict[vertex.value] = vertex
 
-    def add_edge(self, from_vertex, to_vertex, weight = 0):
+    def add_edge(self, from_vertex, to_vertex, weight=0):
+        if from_vertex == to_vertex:
+            print("A vertex cannot have an edge to itself")
+            return
+            
         print("Adding edge from {} to {}".format(from_vertex, to_vertex))
         self.graph_dict[from_vertex.value].add_edge(to_vertex, weight)
         if not self.directed:
